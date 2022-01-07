@@ -10,7 +10,6 @@
             <p class="date">
                 Publicidade em {{ polls.created }} por {{ polls.author }}
             </p>
-            {{ post.body|linebreaks|truncatewords:50 }}
-        </article> 
-    {% endfor %}
+            {{ post.body|linebreaks|truncatewords: 10}}
+        </article>
 {% endblock %}
