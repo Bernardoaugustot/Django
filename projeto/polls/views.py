@@ -1,4 +1,9 @@
-from django.shortcuts import render
+from django.views.generic import DetailView, ListView
+from .models import polls
+# view, genericas feitas por class.
 
-def index(request):
-    return HttpResponse("Hello, world. You're at the polls index.")
+class PostListView(ListView):
+    model = polls
+
+class PostDetailView(DetailView):
+    model = polls
